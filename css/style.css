@@ -18,12 +18,28 @@ body {
 .centerSides {
 	height: 29px;
 	padding-top: 10px;
-	background-color: black;
 	margin: 0 15px 0 15px;
 }
 
-.leftSearch {
-	
+.pinterestLogo {
+	border-radius: 6px 0 0 6px;
+	border: 1px solid #ccc;
+	padding: 4px;
+}
+
+.pinterestLogoIcon {
+	background: url("img/pLogo.png") no-repeat center center;
+	background-size: contain;
+	width: 25px;
+	height: 32px;
+    line-height: 20px;
+    padding: 6px 0 6px 4px;
+}
+
+.searchBar {
+	background-color: #e9e9e9;
+	width: 90%;
+	height: 20px;
 }
 
 .cardHolder {

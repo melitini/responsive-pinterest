@@ -16,6 +16,7 @@ $(function(){
 function initCards() {
     windowWidth = $(window).width(); //grab width of window
     columnWidth = $('.card').outerWidth(); //grab width of cards
+    console.log(columnWidth);
     
     //make sure array is empty for when it resizes
     cards = [];
