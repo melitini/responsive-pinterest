@@ -2,29 +2,40 @@
 
 //global variables
 var windowWidth = 0;
-var cardMargin = 20;
+var cardMargin = 10;
 var columnCount = 0;
-var columnWidth = 0;
+var center = 0;
 var cards = [];
 
+// change cars positions with window resize
 $(function(){
 	$(window).resize(initCards);
 });
 
+//initial calculations 
 function initCards() {
     windowWidth = $(window).width(); //grab width of window
     columnWidth = $('.card').outerWidth(); //grab width of cards
+    
+    //make sure array is empty for when it resizes
     cards = [];
+    
     //calculate max amount of columns that can be added 
+    // two margins (for each side) plus the column width, divided by window width - no floats, round up.
     columnCount = Math.floor(windowWidth/(columnWidth + cardMargin * 2));
+
+    center = (windowWidth - ((columnWidth * columnCount) + (cardMargin * (columnCount-1)))) / 2;
     
     //loop through each column and push cardMargin to an array
     for(var i = 0; i < columnCount; i++) {
         cards.push(cardMargin);
     }
+
+    //init next function
 	placeCards();
 }
 
+//placment of cards based on calculations
 function placeCards() {
 	$('.card').each(function() {
 
@@ -39,7 +50,7 @@ function placeCards() {
 
 		//assign left and top css values 
         $(this).css({
-            'left': leftPosition + 'px',
+            'left': (leftPosition + center) + 'px',
             'top': smallestCard + 'px'
         });
 
