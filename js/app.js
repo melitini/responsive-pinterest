@@ -1,4 +1,4 @@
-
+"use strict;"
 
 //global variables
 var windowWidth = 0;
@@ -24,6 +24,7 @@ function initCards() {
     // two margins (for each side) plus the column width, divided by window width - no floats, round up.
     columnCount = Math.floor(windowWidth/(columnWidth + cardMargin * 2));
 
+    //center cards 
     center = (windowWidth - ((columnWidth * columnCount) + (cardMargin * (columnCount-1)))) / 2;
     
     //loop through each column and push cardMargin to an array
@@ -50,8 +51,8 @@ function placeCards() {
 
 		//assign left and top css values 
         $(this).css({
-            'left': (leftPosition + center) + 'px',
-            'top': smallestCard + 'px'
+            'left': (leftPosition + center) + 'px', 
+            'top': smallestCard + 30 + 'px' 
         });
 
         //update the array with the new height; calculated by adding the current height to the height of the current card and the margin.
