@@ -1,7 +1,60 @@
+/*----------CSS RESET-----------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------CSS RESET-----------*/
+
+
 body {
 	background-color: #E9E9E9;
 	padding-top: 20px;
 	font-family: Helvetica;
+	-webkit-font-smoothing: antialiased;
 }
 
 /*------ SEARCH BAR -------*/
@@ -144,46 +197,106 @@ body {
 	height: 500px;
 	position: relative;
 
+
 }
 .fashion {
-	background: url("img/fashion.jpg") no-repeat center center;
+	background: url("img/fashion.jpg") no-repeat center top;
 	width: 100%;
 	height: 100%;
 	border-radius: 6px 6px 0 0;
+	background-size: cover;
+}
+
+.branding {
+	background: url("img/branding.jpg") no-repeat center top;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px 6px 0 0;
+	background-size: cover;
+}
+
+.food {
+	background: url("img/food.jpg") no-repeat center top;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px 6px 0 0;
+	background-size: cover;
+}
+
+.home {
+	background: url("img/home.jpg") no-repeat center top;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px 6px 0 0;
+	background-size: cover;
 }
 
 
 .cardBody {
-	padding: 3% 5%;
 	color: #333;
 	font-size: 13px;
 	line-height: 17px;
 	word-wrap: break-word;
-	-webkit-font-smoothing: antialiased;
 }
 
+.cardDesc {
+	padding: 3% 5%;
+}
+
+.cardDesc h3 {
+	color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 0;
+
+}
+.cardDesc p {
+	margin: 5px 0;
+
+}
+
+/*-------Card Picked For You Ribbon-----------*/
+.cardPicked {
+	border-top: solid 1px #e5e5e5;
+	padding: 10px;
+	line-height: 15px;
+	position: relative;
+}
+
+.cardPicked h4 {
+	color: #555;
+	font-weight: bold;
+}
+
+.cardPicked p {
+	color: #777;
+}
 .cardPickedIcon {
-	width: 20px;
-	height: 50px;
+	width: 18px;
+	height: 30px;
 	position: relative;
 	flex-grow: 1;
 }
+
 
 .boardIcon1 {
 	background: url("img/boardIcon1.jpg") no-repeat center center;
 	width: 100%;
 	height: 100%;
+	border-radius: 3px;
 
 }
 
 .cardPickedInfo {
 	flex-grow: 3;
-	background-color: red;
+	word-wrap: break-word;
+	align-self: center;
+	margin-left: 5px;
+
 }
 
 .closeCardPicked {
 	flex-grow: 1;
-	background-color: blue;
 }
 
 /*------ Multi Use -------*/
@@ -191,6 +304,8 @@ body {
 .flex {
 	display: flex;
 }
+
+
 
 
 
