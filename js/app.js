@@ -2,7 +2,7 @@
 
 //global variables
 var windowWidth = 0;
-var cardMargin = 10;
+var cardMargin = 12;
 var columnCount = 0;
 var center = 0;
 var cards = [];
@@ -59,5 +59,24 @@ function placeCards() {
         //update the array with the new height; calculated by adding the current height to the height of the current card and the margin.
         cards[cardIndex] = smallestCard + $(this).outerHeight() + cardMargin;
 	})
+
+    //resize left side of navbar
+    var rightWidth = $('.rightSearch').outerWidth();
+    var leftWidth = (windowWidth - rightWidth);
+    $('.leftSearch').css({
+        'width': leftWidth + 'px'
+    });
+
+    // resize search bar
+    var leftSearchWidth = $('.leftSearch').outerWidth();
+    var searchWidth = leftSearchWidth - 28 - 30;
+    $('.searchBar').css({
+        'width': searchWidth + 'px'
+    });
+
 }
+
+
+   
+
 
