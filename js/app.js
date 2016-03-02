@@ -7,6 +7,11 @@ var columnCount = 0;
 var center = 0;
 var cards = [];
 
+var rightWidth;
+var leftWidth;
+var leftSearchWidth;
+var searchWidth;
+
 // change cars positions with window resize
 $(function(){
 	$(window).resize(initCards);
@@ -61,18 +66,18 @@ function placeCards() {
 	})
 
     //resize left side of navbar
-    var rightWidth = $('.rightSearch').outerWidth();
-    var leftWidth = (windowWidth - rightWidth);
-    $('.leftSearch').css({
-        'width': leftWidth + 'px'
-    });
+    // var rightWidth = $('.rightSearch').outerWidth();
+    // var leftWidth = (windowWidth - rightWidth);
+    // $('.leftSearch').css({
+    //     'width': leftWidth + 'px'
+    // });
 
-    // resize search bar
-    var leftSearchWidth = $('.leftSearch').outerWidth();
-    var searchWidth = leftSearchWidth - 28 - 30;
-    $('.searchBar').css({
-        'width': searchWidth + 'px'
-    });
+    // // resize search bar
+    // var leftSearchWidth = $('.leftSearch').outerWidth();
+    // var searchWidth = leftSearchWidth - 28 - 30;
+    // $('.searchBar').css({
+    //     'width': searchWidth + 'px'
+    // });
 
 }
 
