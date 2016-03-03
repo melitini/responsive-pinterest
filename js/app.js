@@ -7,11 +7,6 @@ var columnCount = 0;
 var center = 0;
 var cards = [];
 
-var rightWidth;
-var leftWidth;
-var leftSearchWidth;
-var searchWidth;
-
 // change cars positions with window resize
 $(function(){
 	$(window).resize(initCards);
