@@ -75,10 +75,8 @@ body {
 	height: 25px;
 	width: 100%;
 	padding: 10px;
-	position: fixed;
 	align-items: baseline;
-	-webkit-justify-content: space-around; 
-  	justify-content: space-around; 
+	justify-content: center; 
 }
 
 /*--------Left Search Bar ----------*/
@@ -234,6 +232,7 @@ body {
 	position: absolute;
 	background: #ffffff;
 	width: 230px;
+	height: auto;
 	border: 1px solid #ddd;
 	border-radius: 6px;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
@@ -244,54 +243,95 @@ body {
     transition: all 1s ease-in-out;
 }
 
+.fash {
+	height: 450px;
+}
+
 .cardImg {
 	width: 230px;
-	max-width: 100%;
-	height: 500px;
 	position: relative;
-
-
+	cursor: zoom-in;
 }
+
 .fashion {
-	background: url("img/fashion.jpg") no-repeat center top;
-	width: 100%;
-	height: 100%;
-	border-radius: 6px 6px 0 0;
-	background-size: cover;
+	background: url("img/fashion.jpg") no-repeat center;
+}
+.brand {
+	height: 400px;
+}
+.branding {
+	background: url("img/branding.jpg") no-repeat center center;
 }
 
-.branding {
-	background: url("img/branding.jpg") no-repeat center top;
-	width: 100%;
-	height: 100%;
-	border-radius: 6px 6px 0 0;
-	background-size: cover;
+.ho {
+	height: 700px;
+}
+.home {
+	background: url("img/home.jpg") no-repeat top center;
+}
+.fo {
+	height: 600px;
 }
 
 .food {
-	background: url("img/food.jpg") no-repeat center top;
-	width: 100%;
-	height: 100%;
-	border-radius: 6px 6px 0 0;
-	background-size: cover;
+	background: url("img/food.jpg") no-repeat center center;
 }
 
-.home {
-	background: url("img/home.jpg") no-repeat center top;
-	width: 100%;
-	height: 100%;
-	border-radius: 6px 6px 0 0;
-	background-size: cover;
+.wed {
+	height: 400px;
 }
 
 .wedding {
-	background: url("img/weding.jpg") no-repeat center top;
+	background: url("img/weding.jpg") no-repeat center center;
+}
+
+.tut {
+	height: 1100px;
+}
+
+.tutorial {
+	background: url("img/tutorial.jpg") no-repeat center center;
+}
+
+.pup {
+	height: 350px;
+}
+
+.puppy {
+	background: url("img/puppy.jpg") no-repeat center center;
+}
+
+.trade {
+	height: 150px;
+}
+
+.tradeshow {
+	background: url("img/tradeshow.jpg") no-repeat center center;
+}
+
+.decor {
+	height: 850px;
+}
+
+.decorator {
+	background: url("img/decorator.jpg") no-repeat center center;
+}
+
+.plus {
+	height: 350px;
+}
+
+.plusmodel {
+	background: url("img/plusmodel.jpg") no-repeat center center;
+}
+
+.img {
 	width: 100%;
 	height: 100%;
 	border-radius: 6px 6px 0 0;
 	background-size: cover;
-}
 
+}
 
 .cardBody {
 	color: #333;
@@ -384,6 +424,13 @@ body {
 	border-radius: 50%;
 	background-size: contain;
 }
+.user3 {
+	background: url("img/user3.jpg") no-repeat center center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-size: contain;
+}
 
 .cardPickedInfo {
 	flex-grow: 3;
@@ -391,6 +438,10 @@ body {
 	align-self: center;
 	margin-left: 5px;
 
+}
+
+.cardPicked:hover .closeX{
+	display: block;
 }
 
 .closeCardPicked {
@@ -402,12 +453,10 @@ body {
 	background-size: contain;
 	width: 100%;
 	height: 100%;
-	visibility: hidden;
+	display: none;
 }
 
-.closeX:hover {
-	visibility: visible;
-}
+
 
 .closeX:hover {
 	background: url("img/grey-x.png") no-repeat center center;

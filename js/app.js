@@ -65,19 +65,7 @@ function placeCards() {
         cards[cardIndex] = smallestCard + $(this).outerHeight() + cardMargin;
 	})
 
-    //resize left side of navbar
-    // var rightWidth = $('.rightSearch').outerWidth();
-    // var leftWidth = (windowWidth - rightWidth);
-    // $('.leftSearch').css({
-    //     'width': leftWidth + 'px'
-    // });
-
-    // // resize search bar
-    // var leftSearchWidth = $('.leftSearch').outerWidth();
-    // var searchWidth = leftSearchWidth - 28 - 30;
-    // $('.searchBar').css({
-    //     'width': searchWidth + 'px'
-    // });
+   
 
 }
 
